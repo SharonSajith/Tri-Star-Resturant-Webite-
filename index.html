@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food website|Home</title>
+</head>
+<body>
+
+        <header>
+            <div class="restaurant-title">Tri Star Restaurant</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#book-table">Book Table</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Tri Star Restaurant</h1>
+            <p>Where delicious food meets unforgettable experiences.</p>
+            <button onclick="scrollToMenu()">Explore Our Menu</button>
+        </div>
+    </section>
+
+    <!-- Other content will go here -->
+    
+    
+        <!-- Image Banner Above Menu -->
+        <div class="menu-banner">
+            <img src="restaurant-menu.jpg" alt="Delicious food" />
+        </div>
+    
+       
+    
+        <section id="menu">
+            <h2>Our Menu</h2>
+            <div class="menu-container">
+                <div class="menu-item">
+                    <img src="Pic/p4.jpg" alt="Pizza" width="80px"height="50px">
+                    <h3>Pizza</h3>
+                    <p>Rs.800/=</p>
+                    <button class="order-btn" data-item="Pizza" data-price="12.99">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Pic/p3.jpg" width="80px"height="50px" alt="Burger">
+                    <h3>Burger</h3>
+                    <p>Rs.600/=</p>
+                    <button class="order-btn" data-item="Burger" data-price="8.99">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Pic/p5.jpg" alt="Pizza" width="80px"height="50px">
+                    <h3>Noodles</h3>
+                    <p>Rs.400/=</p>
+                    <button class="order-btn" data-item="Pizza" data-price="12.99">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Pic/p6.jpg" alt="Pizza" width="80px"height="50px">
+                    <h3>Biriyaani</h3>
+                    <p>Rs.1000/=</p>
+                    <button class="order-btn" data-item="Pizza" data-price="12.99">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Pic/p7.jpg" alt="Pizza" width="80px"height="50px">
+                    <h3>French Fries</h3>
+                    <p>Rs.150/=</p>
+                    <button class="order-btn" data-item="Pizza" data-price="12.99">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Pic/p8.png" alt="Pizza" width="80px"height="50px">
+                    <h3>Fish and Chips</h3>
+                    <p>Rs.700/=</p>
+                    <button class="order-btn" data-item="Pizza" data-price="12.99">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Pic/p9.jpg" alt="Pizza" width="80px"height="50px">
+                    <h3>Shawarma</h3>
+                    <p>Rs.700/=</p>
+                    <button class="order-btn" data-item="Pizza" data-price="12.99">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Pic/p11.jpg" alt="Pizza" width="80px"height="50px">
+                    <h3>Hot Dog</h3>
+                    <p>Rs.700/=</p>
+                    <button class="order-btn" data-item="Pizza" data-price="12.99">Order</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="Pic/p6.jpg" alt="Pizza" width="80px"height="50px">
+                <h3>dog hot</h3>
+                <p>Rs.1000/=</p>
+                <button class="order-btn" data-item="Pizza" data-price="12.99">Order</button>
+            </div>
+                <!-- Add more food items here -->
+            </div>
+            <!-- Order Form Modal (Hidden by default) -->
+<div id="order-modal" class="modal">
+    <div class="modal-content">
+        <span id="close-modal" class="close-btn">&times;</span>
+        <h2 id="food-name">Order your food</h2>
+        <p id="food-price"></p>
+        
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" value="1" min="1">
+        
+        <button id="add-to-cart" class="btn">Add to Cart</button>
+    </div>
+</div>
+
+        </section>
+        
+    </section>
+    <section id="book-table">
+    <h2>Book a Table</h2>
+    <p>Reserve your table and enjoy an unforgettable dining experience at Tri Star Restaurant.</p>
+
+    <form id="reservation-form">
+        <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name" />
+        </div>
+
+        <div class="form-group">
+            <label for="date">Reservation Date</label>
+            <input type="date" id="date" name="date" required />
+        </div>
+
+        <div class="form-group">
+            <label for="time">Reservation Time</label>
+            <input type="time" id="time" name="time" required />
+        </div>
+
+        <div class="form-group">
+            <label for="people">Number of People</label>
+            <input type="number" id="people" name="people" min="1" required placeholder="Number of people" />
+        </div>
+
+        <button type="submit">Book Table</button>
+    </form>
+</section>
+<section id="auth">
+    <h2>Sign In or Sign Up</h2>
+
+    <!-- Buttons to switch between forms -->
+    <div class="auth-buttons">
+        <button id="sign-in-btn" onclick="showSignIn()">Sign In</button>
+        <button id="sign-up-btn" onclick="showSignUp()">Sign Up</button>
+    </div>
+
+    <!-- Sign In Form -->
+    <form id="sign-in-form" class="auth-form">
+        <h3>Sign In</h3>
+        <div class="form-group">
+            <label for="signin-email">Email</label>
+            <input type="email" id="signin-email" name="signin-email" required placeholder="Enter your email" />
+        </div>
+        <div class="form-group">
+            <label for="signin-password">Password</label>
+            <input type="password" id="signin-password" name="signin-password" required placeholder="Enter your password" />
+        </div>
+        <button type="submit">Sign In</button>
+    </form>
+
+    <!-- Sign Up Form -->
+    <form id="sign-up-form" class="auth-form" style="display: none;">
+        <h3>Sign Up</h3>
+        <div class="form-group">
+            <label for="signup-name">Full Name</label>
+            <input type="text" id="signup-name" name="signup-name" required placeholder="Enter your full name" />
+        </div>
+        <div class="form-group">
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email" name="signup-email" required placeholder="Enter your email" />
+        </div>
+        <div class="form-group">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" name="signup-password" required placeholder="Create a password" />
+        </div>
+        <div class="form-group">
+            <label for="signup-confirm-password">Confirm Password</label>
+            <input type="password" id="signup-confirm-password" name="signup-confirm-password" required placeholder="Confirm your password" />
+        </div>
+        <button type="submit">Sign Up</button>
+    </form>
+</section>
+<!-- About Section -->
+<section id="about">
+    <h2>About Tri Star Restaurant</h2>
+    <p>Welcome to Tri Star Restaurant, where we serve the finest dishes made with the freshest ingredients. Our chefs create culinary masterpieces to delight your senses. We aim to provide a warm and welcoming atmosphere where you can enjoy a memorable dining experience with family and friends.</p>
+    <p>Located in the heart of the city, Tri Star Restaurant has been serving delicious food for over 10 years. Whether you're here for a casual meal or a special occasion, our staff is committed to making your visit unforgettable.</p>
+    <h3>Our Values:</h3>
+    <ul>
+        <li>Quality Ingredients</li>
+        <li>Exceptional Service</li>
+        <li>Passion for Cooking</li>
+    </ul>
+</section>
+
+<footer>
+    <p>&copy; 2024 Tri Star Restaurant. All Rights Reserved.</p>
+    <p>Follow us on social media: 
+        <a href="#">Facebook</a> | 
+        <a href="#">Instagram</a> | 
+        <a href="#">Twitter</a>
+    </p>
+</footer>
+
+
+    <script src="script.js"></script>
+  
+</body>
+</html>
